@@ -35,6 +35,11 @@ public class MainActivity extends AppCompatActivity implements DataCallBack {
         giftPresenter = new GiftPresenter(this);
         giftPresenter.queryGiftList();
     }
+
+    /**
+     *
+     * @param list
+     */
     @Override
     public void setDataCallback(List<String> list) {
         this.datas.addAll(list);
