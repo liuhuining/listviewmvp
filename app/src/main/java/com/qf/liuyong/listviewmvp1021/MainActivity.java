@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements DataCallBack {
         listView.setAdapter(arrayAdapter);
         //添加帧动画
         AnimationDrawable drawable = (AnimationDrawable)imageView.getBackground();
+        //启动动画
         drawable.start();
         listView.setEmptyView(imageView);
         giftPresenter = new GiftPresenter(this);
