@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements DataCallBack {
     private GiftPresenter giftPresenter;
     private ImageView imageView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements DataCallBack {
         listView = (ListView) findViewById(R.id.listview);
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, datas);
         listView.setAdapter(arrayAdapter);
+        //添加帧动画
         AnimationDrawable drawable = (AnimationDrawable)imageView.getBackground();
         drawable.start();
         listView.setEmptyView(imageView);
